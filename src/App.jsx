@@ -1,3 +1,11 @@
 export default function App() {
-  return <h1>Demo Vite & React</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Header />}>
+          <Route index element={<Homepage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
