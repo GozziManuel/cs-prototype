@@ -1,5 +1,6 @@
 import { useParams } from "react-router"
 import trips from "../data/trips";
+import {Link} from "react-router"
 
 export default function DetailedUserPage() {
     const { id, idParticipant } = useParams();
@@ -14,6 +15,7 @@ export default function DetailedUserPage() {
                 <li><strong>Phone number:</strong> {participant.phone}</li>
                 <li><strong>Tax code:</strong> {participant.taxCode}</li>
             </ul>
+            <Link to={`/trips/${id}`} className="btn btn-primary">Go back to participants list</Link>
 
         </div>
     </>
