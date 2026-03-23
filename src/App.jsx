@@ -1,10 +1,10 @@
+import Homepage from "./pages/Homepage";
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Header />}>
-          <Route index element={<Homepage />} />
-        </Route>
+        <Route index element={<Homepage />} />
       </Routes>
     </BrowserRouter>
   );
