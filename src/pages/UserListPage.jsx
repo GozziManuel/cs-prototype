@@ -9,7 +9,7 @@ export default function UserListPage() {
         <div className="container">
             <h1 className="my-4">Participants</h1>
             <ul className="list-group">
-                {trip.participants.map((participant) => <li key={participant.id} className="list-group-item"><ParticipantCard participant={participant}/></li>)}
+                {trip.participants.map((participant) => <li key={participant.id} className="list-group-item"><ParticipantCard participant={participant} tripId={id}/></li>)}
             </ul>
         </div>
     </>;

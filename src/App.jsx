@@ -13,7 +13,7 @@ export default function App() {
           <Route index element={<Homepage />} />
           <Route path="/trips" element={<Triplist />} />
           <Route path="/trips/:id" element={<UserListPage />} />
-          <Route path="/participant/:id" element={<DetailedUserPage/>}/>
+          <Route path="/trips/:id/:idParticipant" element={<DetailedUserPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
