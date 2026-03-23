@@ -1,9 +1,10 @@
+import { Link } from "react-router";
 
 
 
 export default function ParticipantCard({ participant }) {
     return (
-        <div>
+        <Link to="/paticipant/:id">
             <div className="d-flex align-items-center gap-2 mb-2">
                 <div className="avatar">
                     {participant.firstName?.charAt(0)}{participant.lastName.charAt(0)}
@@ -11,5 +12,5 @@ export default function ParticipantCard({ participant }) {
                 <p className="m-0">{participant.firstName} {participant.lastName}</p>
             </div>
             <p className="m-0"><strong>Phone number: </strong>{participant.phone}</p>
-        </div>)
+        </Link>)
 }
