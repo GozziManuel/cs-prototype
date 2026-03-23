@@ -8,9 +8,7 @@ export default function DefaultLayout() {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <NavLink to={"/"} className="fs-3 fw-bold me-3 navbar-brand">
-            Homepage
-          </NavLink>
+          <h2 className="fs-1 fw-bold me-3 navbar-brand">BooRoad</h2>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,6 +22,11 @@ export default function DefaultLayout() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink to={"/"} className=" me-3 nav-link">
+                  Homepage
+                </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink to={"/trips"} className="nav-link">
                   Trip List
