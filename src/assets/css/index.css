@@ -1,0 +1,8 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+.card-link {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+}
