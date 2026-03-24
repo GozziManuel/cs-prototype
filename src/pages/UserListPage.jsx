@@ -32,6 +32,7 @@ export default function UserListPage() {
   );
 
   return (
+    <>
     <div className="container">
       <h1 className="my-4 d-flex align-items-center gap-3">
         Participants
@@ -94,5 +95,6 @@ export default function UserListPage() {
         </ul>
       </div>
     </>
+  </>
   );
 }
