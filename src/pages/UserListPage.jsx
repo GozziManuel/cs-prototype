@@ -1,7 +1,6 @@
 import { Link, useParams } from "react-router";
 import trips from "../data/trips";
 import ParticipantCard from "../components/ParticipantCard";
-import { Link } from "react-router";
 import { useState } from "react";
 
 export default function UserListPage() {
