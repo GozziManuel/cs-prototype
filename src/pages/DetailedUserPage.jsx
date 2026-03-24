@@ -29,7 +29,7 @@ export default function DetailedUserPage() {
             <strong>Tax code:</strong> {participant.taxCode}
           </li>
         </ul>
-        <Link to={`/trips/${id}`} className="btn btn-primary">
+        <Link to={`/trips/${id}/participants`} className="btn btn-primary">
           Go back to participants list
         </Link>
       </div>

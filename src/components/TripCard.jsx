@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function TripCard({ el }) {
   return (
-    <div className="col-lg-4 col-sm-6 col-12">
+    <Link to={`/trips/${el.id}`} className="col-lg-4 col-sm-6 col-12">
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{el.name}</h5>
@@ -16,11 +16,11 @@ export default function TripCard({ el }) {
             </p>
           </div>
           <p className="mt-3 mb-0">Participants: {el.participants.length}</p>
-          <Link to={"/trips/" + el.id} className="btn btn-primary">
+          <Link to={`/trips/${el.id}/participants`} className="btn btn-primary">
             See participants
           </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
