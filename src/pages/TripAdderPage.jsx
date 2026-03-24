@@ -5,8 +5,24 @@ import { useTrips } from "../contexts/TripsContext";
 const initialInput = {
   name: "",
   city: "",
-  dateEnd: "",
-  dateStart: "",
+  startDate: "",
+  endDate: "",
+  details: {
+    description: "",
+    meetingPoint: "",
+    itinerary: [],
+    transport: {
+      arrival: "",
+      local: "",
+      departure: ""
+    },
+    accommodation: {
+      name: "",
+      type: "",
+      nights: null ,
+    },
+    placesToVisit: []
+  },
   participants: [],
 };
 // aggiungo addTrip come prop
@@ -72,10 +88,10 @@ export default function TripAdder() {
             <input
               type="date"
               onChange={handleChange}
-              value={input.dateStart}
+              value={input.startDate}
               //
               className="form-control"
-              name="dateStart"
+              name="startDate"
             />
             <label className="form-label mx-3">
               <span className="fw-bold">To</span>
@@ -83,10 +99,10 @@ export default function TripAdder() {
             <input
               type="date"
               onChange={handleChange}
-              value={input.dateEnd}
+              value={input.endDate}
               //
               className="form-control"
-              name="dateEnd"
+              name="endDate"
             />
           </div>
 
