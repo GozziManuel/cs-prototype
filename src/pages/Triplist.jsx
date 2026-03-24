@@ -16,7 +16,7 @@ export default function Triplist() {
     <div className="container-sm">
       <h1 className="my-4">Triplist</h1>
       <div className="row g-3">
-        {trips.map((el) => {
+        {tripsList.map((el) => {
           return <TripCard el={el} key={el.id} />;
         })}
         <div className="col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMainContext } from "../context/MainContext";
 
 const initialInput = {
   TripName: "",
@@ -7,8 +8,9 @@ const initialInput = {
   DateStart: null,
 };
 // aggiungo addTrip come prop
-export default function TripAdder({addTrip}) {
+export default function TripAdder() {
   const [input, setInput] = useState(initialInput);
+  const { addTrip } = useMainContext();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput({
@@ -17,22 +19,21 @@ export default function TripAdder({addTrip}) {
     });
   };
 
-  // funzione handleSubmit 
-    funzione handleSubmit = (e) => {
-      e.preventDefault();
+  // funzione handleSubmit
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-      // aggiungo il viaggio alla lista
-      addTrip(input);
+    // aggiungo il viaggio alla lista
+    addTrip(input);
 
-      // resetta il form
-      setInput(initialInput);
-
-    };
+    // resetta il form
+    setInput(initialInput);
+  };
 
   return (
     <>
       <div className="container-sm mt-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label fw-bold">Trip name</label>
             <input
