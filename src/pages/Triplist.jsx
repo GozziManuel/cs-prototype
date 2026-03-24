@@ -13,7 +13,10 @@ export default function Triplist() {
           return <TripCard el={el} key={el.id} />;
         })}
         <div className="col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center">
-          <Link className="text-primary fs-2 text-center " to={"/trip/adder"}>
+          <Link
+            className="text-primary fs-2 text-center nav-link bluenav"
+            to={"/trip/adder"}
+          >
             Aggiungi <br /> +
           </Link>
         </div>

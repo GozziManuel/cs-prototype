@@ -3,10 +3,7 @@ import { NavLink, Outlet } from "react-router";
 export default function DefaultLayout() {
   return (
     <>
-      <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
-        data-bs-theme="dark"
-      >
+      <nav className="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
         <div className="container-fluid">
           <h2 className="fs-1 fw-bold me-3 navbar-brand">BooRoad</h2>
           <button

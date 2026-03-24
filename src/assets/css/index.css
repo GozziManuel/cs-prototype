@@ -40,7 +40,7 @@ a {
   position: absolute;
   width: 0%;
   height: 2px;
-  background: #3b82f6;
+  background: white;
   left: 0;
   bottom: -4px;
   transition: width 0.3s ease;
@@ -114,4 +114,7 @@ a {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+.bluenav::after {
+  background: #3b82f6;
 }
