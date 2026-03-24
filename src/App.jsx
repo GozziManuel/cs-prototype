@@ -3,8 +3,8 @@ import Homepage from "./pages/Homepage";
 import DefaultLayout from "./Layout/DefaultLayout";
 import Triplist from "./pages/Triplist";
 import UserListPage from "./pages/UserListPage";
-
 import DetailedUserPage from "./pages/DetailedUserPage";
+import TripAdder from "./pages/TripAdderPage";
 import TripDetailsPage from "./pages/TripDetailsPage";
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
             path="/trips/:id/participants/:idParticipant"
             element={<DetailedUserPage />}
           />
+          <Route path="/trip/adder" element={<TripAdder />} />
         </Route>
       </Routes>
     </BrowserRouter>

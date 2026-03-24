@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function TripCard({ el }) {
   return (
     <div className="col-lg-4 col-sm-6 col-12">
-      <div className="card">
+      <div className="card hover hoverOn">
         <div className="card-body">
           <Link to={`/trips/${el.id}`} className="text-black">
             <h5 className="card-title">{el.name}</h5>

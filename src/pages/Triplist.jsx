@@ -1,5 +1,7 @@
+import { Link } from "react-router";
 import TripCard from "../components/TripCard";
 import trips from "../data/trips";
+
 export default function Triplist() {
   console.log(trips);
 
@@ -10,6 +12,11 @@ export default function Triplist() {
         {trips.map((el) => {
           return <TripCard el={el} key={el.id} />;
         })}
+        <div className="col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center">
+          <Link className="text-primary fs-2 text-center " to={"/trip/adder"}>
+            Aggiungi <br /> +
+          </Link>
+        </div>
       </div>
     </div>
   );
