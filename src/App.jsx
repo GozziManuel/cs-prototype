@@ -6,6 +6,7 @@ import UserListPage from "./pages/UserListPage";
 import DetailedUserPage from "./pages/DetailedUserPage";
 import TripAdder from "./pages/TripAdderPage";
 import TripDetailsPage from "./pages/TripDetailsPage";
+import AddParticipantPage from "./pages/AddParticipantsPage";
 
 export default function App() {
   return (
@@ -17,6 +18,10 @@ export default function App() {
           <Route path="/trips/:id" element={<TripDetailsPage />} />
           <Route path="/trips/:id/participants" element={<UserListPage />} />
 
+          <Route
+            path="/trips/:id/participants/add"
+            element={<AddParticipantPage />}
+          />
           <Route
             path="/trips/:id/participants/:idParticipant"
             element={<DetailedUserPage />}
