@@ -33,68 +33,44 @@ export default function UserListPage() {
 
   return (
     <>
-    <div className="container">
-      <h1 className="my-4 d-flex align-items-center gap-3">
-        Participants
-        <Link to="/trips" className="btn btn-primary">
-          Go back to trip list
-        </Link>
-        <Link to={`/trips/${id}/participants/add`} className="btn btn-success">
-          Add
-        </Link>
-      </h1>
-
-      {/* SEARCH */}
-      <input
-        type="text"
-        value={search}
-        onChange={handleSearch}
-        className="mb-3 form-control"
-        placeholder="Search participant"
-      />
-
-      {/* LISTA */}
-      <ul className="list-group">
-        {participantsList.map((participant) => (
-          <li
-            key={participant.id}
-            className="list-group-item d-flex justify-content-between align-items-center hoverOn hover"
-          >
-            <ParticipantCard participant={participant} tripId={id} />
-            <button
-              className="btn btn-danger btn-sm"
-              onClick={() => handleDelete(participant.id)}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <>
       <div className="container">
         <h1 className="my-4 d-flex align-items-center gap-3">
           Participants {`(${trip?.participants.length})`}
           <Link to="/trips" className="btn btn-primary">
             Go back to trip list
           </Link>
+          <Link to={`/trips/${id}/participants/add`} className="btn btn-success">
+            Add
+          </Link>
         </h1>
+
+        {/* SEARCH */}
         <input
           type="text"
           value={search}
           onChange={handleSearch}
-          className="mb-3"
-          placeholder="search participant"
+          className="mb-3 form-control"
+          placeholder="Search participant"
         />
-        <ul className="list-group ">
+
+        {/* LISTA */}
+        <ul className="list-group">
           {participantsList.map((participant) => (
-            <li key={participant.id} className="list-group-item hoverOn hover">
+            <li
+              key={participant.id}
+              className="list-group-item d-flex justify-content-between align-items-center hoverOn hover"
+            >
               <ParticipantCard participant={participant} tripId={id} />
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => handleDelete(participant.id)}
+              >
+                Delete
+              </button>
             </li>
           ))}
         </ul>
       </div>
     </>
-  </>
   );
 }
