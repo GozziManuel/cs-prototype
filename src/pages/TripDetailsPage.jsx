@@ -1,10 +1,11 @@
 import { useParams, Link } from "react-router";
-import trips from "../data/trips";
 import ItineraryElement from "../components/ItineraryElement";
+import { useTrips } from "../contexts/TripsContext";
 
 export default function TripDetailsPage() {
   const { id } = useParams();
-  const trip = trips.find((trip) => trip.id === parseInt(id));
+  const { tripsList } = useTrips();
+  const trip = tripsList.find((trip) => trip.id === parseInt(id));
   return (
     <div className="container">
       <div className="my-4 d-flex align-items-center flex-column flex-sm-row gap-5">
