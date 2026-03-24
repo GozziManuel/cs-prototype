@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import trips from "../data/trips";
 import ItineraryElement from "../components/ItineraryElement";
 
@@ -7,9 +7,17 @@ export default function TripDetailsPage() {
     const trip = trips.find((trip) => trip.id === parseInt(id));
     return (
         <div className="container">
-            <div className="my-4">
-                <h1>Trip to {trip.city}</h1>
-                <h2>{trip.name}</h2>
+            <div className="my-4 d-flex align-items-center flex-column flex-sm-row gap-5">
+                <div>
+                    <h1>Trip to {trip.city}</h1>
+                    <h2>{trip.name}</h2>
+                </div>
+                <div className="d-flex flex-column flex-sm-row gap-2">
+                    <Link to={`/trips`} className="btn btn-primary">Return to trips list</Link>
+                    <Link to={`/trips/${id}/participants`} className="btn btn-primary">
+                        See participants
+                    </Link>
+                </div>
             </div>
             <p>{trip?.details?.description}</p>
             <ul className="list-unstyled">
