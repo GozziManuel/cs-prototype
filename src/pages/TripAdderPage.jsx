@@ -17,6 +17,11 @@ export default function TripAdder() {
     });
   };
 
+  // funzione handleSubmit 
+    funzione handleSubmit = (e) => {
+      e.preventDefault();
+    }
+
   return (
     <>
       <div className="container-sm mt-4">
