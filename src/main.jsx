@@ -11,8 +11,12 @@ import "./assets/css/index.css";
 // Javascript
 import App from "./App.jsx";
 
+import { MainContextProvider } from "./context/MainContext";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
+    <MainContextProvider>
+      <App />
+    </MainContextProvider>
+  </StrictMode>
 );
