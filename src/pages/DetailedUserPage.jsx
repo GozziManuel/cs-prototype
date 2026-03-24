@@ -1,6 +1,5 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import trips from "../data/trips";
-import { Link } from "react-router";
 
 export default function DetailedUserPage() {
   const { id, idParticipant } = useParams();
