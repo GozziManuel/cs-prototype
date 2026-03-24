@@ -32,9 +32,9 @@ export default function UserListPage() {
           className="mb-3"
           placeholder="search participant"
         />
-        <ul className="list-group">
+        <ul className="list-group ">
           {participantsList.map((participant) => (
-            <li key={participant.id} className="list-group-item">
+            <li key={participant.id} className="list-group-item hoverOn hover">
               <ParticipantCard participant={participant} tripId={id} />
             </li>
           ))}

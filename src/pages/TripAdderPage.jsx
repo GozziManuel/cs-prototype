@@ -1,44 +1,73 @@
+import { useState } from "react";
+
+const initialInput = {
+  TripName: "",
+  City: "",
+  DateEnd: null,
+  DateStart: null,
+};
+
 export default function TripAdder() {
+  const [input, setInput] = useState(initialInput);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput({
+      ...input,
+      [name]: value,
+    });
+  };
+
   return (
     <>
       <div className="container-sm mt-4">
         <form>
-          <div class="mb-3">
-            <label class="form-label fw-bold">Trip name</label>
+          <div className="mb-3">
+            <label className="form-label fw-bold">Trip name</label>
             <input
+              name="TripName"
+              onChange={handleChange}
+              value={input.TripName}
+              //
               type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              className="form-control"
             />
           </div>
-          <div class="mb-3">
-            <label class="form-label fw-bold">Where (city name)</label>
+          <div className="mb-3">
+            <label className="form-label fw-bold">Where (city name)</label>
             <input
+              name="City"
+              onChange={handleChange}
+              value={input.City}
+              //
               type="text"
-              class="form-control"
-              id="exampleInputPassword1"
+              className="form-control"
             />
-            <div class="form-text">Please insert valid City Name</div>
+            <div className="form-text">Please insert valid City Name</div>
           </div>
-          <label class="form-label fw-bold">Date</label>
-          <div class="mb-3 d-flex align-items-center">
+          <label className="form-label fw-bold">Date</label>
+          <div className="mb-3 d-flex align-items-center">
             <input
               type="date"
-              class="form-control"
-              id="exampleInputPassword1"
+              onChange={handleChange}
+              value={input.DateStart}
+              //
+              className="form-control"
+              name="DateStart"
             />
-            <label class="form-label mx-3">
+            <label className="form-label mx-3">
               <span className="fw-bold">To</span>
             </label>
             <input
               type="date"
-              class="form-control"
-              id="exampleInputPassword1"
+              onChange={handleChange}
+              value={input.DateEnd}
+              //
+              className="form-control"
+              name="DateEnd"
             />
           </div>
 
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Add
           </button>
         </form>

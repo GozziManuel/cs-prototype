@@ -94,13 +94,24 @@ a {
   text-align: center;
 }
 
-.avatar{
-  width:30px;
-  height:30px;
+.avatar {
+  width: 30px;
+  height: 30px;
   background-color: green;
   color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* transition */
+
+.hoverOn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.hover {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
