@@ -4,7 +4,12 @@ import trips from "../data/trips";
 import { useState } from "react";
 
 export default function Triplist() {
-  console.log(trips);
+  const [tripsList, setTripsList] = useState(trips);
+  const addTrip = (newTrip) => {
+    setTripsList([...tripsList, newTrip]);
+  };
+
+  console.log(tripsList);
 
   return (
     <div className="container-sm">
