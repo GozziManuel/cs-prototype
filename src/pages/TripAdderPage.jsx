@@ -6,8 +6,8 @@ const initialInput = {
   DateEnd: null,
   DateStart: null,
 };
-
-export default function TripAdder() {
+// aggiungo addTrip come prop
+export default function TripAdder({addTrip}) {
   const [input, setInput] = useState(initialInput);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,6 +16,18 @@ export default function TripAdder() {
       [name]: value,
     });
   };
+
+  // funzione handleSubmit 
+    funzione handleSubmit = (e) => {
+      e.preventDefault();
+
+      // aggiungo il viaggio alla lista
+      addTrip(input);
+
+      // resetta il form
+      setInput(initialInput);
+
+    };
 
   return (
     <>

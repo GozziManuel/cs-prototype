@@ -1,9 +1,16 @@
 import { Link } from "react-router";
 import TripCard from "../components/TripCard";
 import trips from "../data/trips";
+import { useState } from "react";
+import TripAdder from "./TripAdderPage";
 
 export default function Triplist() {
-  console.log(trips);
+  const [tripsList, setTripsList] = useState(trips);
+  const addTrip = (newTrip) => {
+    setTripsList([...tripsList, newTrip]);
+  };
+
+  console.log(tripsList);
 
   return (
     <div className="container-sm">
