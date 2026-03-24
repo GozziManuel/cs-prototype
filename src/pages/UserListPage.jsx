@@ -10,18 +10,12 @@ export default function UserListPage() {
   const handleSearch = (e) => {
     setSearch(e.target.value);
   };
-  const participantsList =
-    trip.participants.filter(
-      (participant) =>
-        participant.firstName
-          .trim()
-          .toLowerCase()
-          .includes(search.trim().toLowerCase()) ||
-        participant.lastName
-          .trim()
-          .toLowerCase()
-          .includes(search.trim().toLowerCase()),
-    ) || trip.participants;
+  const participantsList = trip.participants.filter((participant) =>
+    `${participant.firstName} ${participant.lastName}`
+      .trim()
+      .toLowerCase()
+      .includes(search.trim().toLowerCase()),
+  );
   return (
     <>
       <div className="container">
