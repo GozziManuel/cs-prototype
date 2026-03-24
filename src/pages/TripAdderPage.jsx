@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useMainContext } from "../context/MainContext";
+import { useNavigate } from "react-router";
 
 const initialInput = {
   TripName: "",
@@ -11,6 +12,7 @@ const initialInput = {
 export default function TripAdder() {
   const [input, setInput] = useState(initialInput);
   const { addTrip } = useMainContext();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput({
@@ -28,6 +30,7 @@ export default function TripAdder() {
 
     // resetta il form
     setInput(initialInput);
+    navigate("/trips");
   };
 
   return (
