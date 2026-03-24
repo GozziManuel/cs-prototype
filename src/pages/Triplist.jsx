@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import TripCard from "../components/TripCard";
 import trips from "../data/trips";
+import { useState } from "react";
 
 export default function Triplist() {
   console.log(trips);
