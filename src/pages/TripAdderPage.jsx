@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 import { useTrips } from "../contexts/TripsContext";
 
 const initialInput = {
@@ -8,12 +8,13 @@ const initialInput = {
   dateEnd: "",
   dateStart: "",
   participants: [],
+  itinerary: [],
 };
 // aggiungo addTrip come prop
 export default function TripAdder() {
   const [input, setInput] = useState(initialInput);
   const navigate = useNavigate();
-  const {addTrip, tripsList} = useTrips();
+  const { addTrip, tripsList } = useTrips();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +24,7 @@ export default function TripAdder() {
     });
   };
 
-  // funzione handleSubmit 
+  // funzione handleSubmit
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -38,7 +39,6 @@ export default function TripAdder() {
     //  torna alla lista
     navigate(`/trips`);
   }
-
 
   return (
     <>
