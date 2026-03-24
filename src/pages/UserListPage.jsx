@@ -1,21 +1,49 @@
 import { Link, useParams } from "react-router";
 import trips from "../data/trips";
 import ParticipantCard from "../components/ParticipantCard";
+import { Link } from "react-router";
+import { useState } from "react";
 
 export default function UserListPage() {
   const { id } = useParams();
   const trip = trips.find((trip) => trip.id === parseInt(id));
+  const [search, setSearch] = useState("");
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+  const participantsList =
+    trip.participants.filter(
+      (participant) =>
+        participant.firstName
+          .trim()
+          .toLowerCase()
+          .includes(search.trim().toLowerCase()) ||
+        participant.lastName
+          .trim()
+          .toLowerCase()
+          .includes(search.trim().toLowerCase()),
+    ) || trip.participants;
   return (
     <>
       <div className="container">
-        <h1 className="my-4">Participants</h1>
+        <h1 className="my-4 d-flex align-items-center gap-3">
+          Participants{" "}
+          <Link to="/trips" className="btn btn-primary">
+            Go back to trip list
+          </Link>
+        </h1>
+        <input
+          type="text"
+          value={search}
+          onChange={handleSearch}
+          className="mb-3"
+          placeholder="search participant"
+        />
         <ul className="list-group">
-          {trip.participants.map((participant) => (
-            <Link to={"/participant/" + participant.id}>
-              <li key={participant.id} className="list-group-item">
-                <ParticipantCard participant={participant} />
-              </li>
-            </Link>
+          {participantsList.map((participant) => (
+            <li key={participant.id} className="list-group-item">
+              <ParticipantCard participant={participant} tripId={id} />
+            </li>
           ))}
         </ul>
       </div>
