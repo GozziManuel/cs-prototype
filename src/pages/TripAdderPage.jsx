@@ -1,14 +1,20 @@
 import { useState } from "react";
+import {useNavigate} from "react-router";
+import { useTrips } from "../contexts/TripsContext";
 
 const initialInput = {
-  TripName: "",
-  City: "",
-  DateEnd: null,
-  DateStart: null,
+  name: "",
+  city: "",
+  dateEnd: "",
+  dateStart: "",
+  participants: [],
 };
-
+// aggiungo addTrip come prop
 export default function TripAdder() {
   const [input, setInput] = useState(initialInput);
+  const navigate = useNavigate();
+  const {addTrip, tripsList} = useTrips();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput({
@@ -17,16 +23,33 @@ export default function TripAdder() {
     });
   };
 
+  // funzione handleSubmit 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newTrip = {
+      id: tripsList.length + 1,
+      ...input,
+    };
+
+    addTrip(newTrip);
+    console.log(tripsList);
+
+    //  torna alla lista
+    navigate(`/trips`);
+  }
+
+
   return (
     <>
       <div className="container-sm mt-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label fw-bold">Trip name</label>
             <input
-              name="TripName"
+              name="name"
               onChange={handleChange}
-              value={input.TripName}
+              value={input.name}
               //
               type="text"
               className="form-control"
@@ -35,9 +58,9 @@ export default function TripAdder() {
           <div className="mb-3">
             <label className="form-label fw-bold">Where (city name)</label>
             <input
-              name="City"
+              name="city"
               onChange={handleChange}
-              value={input.City}
+              value={input.city}
               //
               type="text"
               className="form-control"
@@ -49,10 +72,10 @@ export default function TripAdder() {
             <input
               type="date"
               onChange={handleChange}
-              value={input.DateStart}
+              value={input.dateStart}
               //
               className="form-control"
-              name="DateStart"
+              name="dateStart"
             />
             <label className="form-label mx-3">
               <span className="fw-bold">To</span>
@@ -60,10 +83,10 @@ export default function TripAdder() {
             <input
               type="date"
               onChange={handleChange}
-              value={input.DateEnd}
+              value={input.dateEnd}
               //
               className="form-control"
-              name="DateEnd"
+              name="dateEnd"
             />
           </div>
 
