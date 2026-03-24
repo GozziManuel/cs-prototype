@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 import TripCard from "../components/TripCard";
-import trips from "../data/trips";
 import { useState } from "react";
 import TripAdder from "./TripAdderPage";
+import { useMainContext } from "../context/MainContext";
 
 export default function Triplist() {
-  const [tripsList, setTripsList] = useState(trips);
+  const { tripsList } = useMainContext();
   const addTrip = (newTrip) => {
     setTripsList([...tripsList, newTrip]);
   };
