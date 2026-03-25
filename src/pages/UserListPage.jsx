@@ -35,11 +35,14 @@ export default function UserListPage() {
     <>
       <div className="container">
         <h1 className="my-4 d-flex align-items-center gap-3">
-          Participants {`(${trip?.participants?.length})`}
+          Participants ({participants.length})
           <Link to="/trips" className="btn btn-primary">
             Go back to trip list
           </Link>
-          <Link to={`/trips/${id}/participants/add`} className="btn btn-success">
+          <Link
+            to={`/trips/${id}/participants/add`}
+            className="btn btn-success"
+          >
             Add
           </Link>
         </h1>
