@@ -72,7 +72,7 @@ export default function AddParticipantPage() {
           />
 
           <input
-            type="text"
+            type="number"
             name="phone"
             placeholder="Phone"
             value={formData.phone}

@@ -17,7 +17,7 @@ export default function TripCard({ el }) {
               </p>
             </div>
           </Link>
-          <p className="mt-3 mb-0">Participants: {el.participants.length}</p>
+
           <Link to={`/trips/${el.id}/participants`} className="btn btn-primary">
             See participants
           </Link>
