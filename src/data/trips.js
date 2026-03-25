@@ -5,49 +5,49 @@ const trips = [
         city: "Como",
         startDate: "2024-07-10",
         endDate: "2024-07-12",
-        details: {
-            description: "A relaxing trip to Lake Como featuring nature, historic villas, and scenic walks.",
-            meetingPoint: "Milan Central Station - main entrance",
-            itinerary: [
-                {
-                    day: 1,
-                    activities: [
-                        "Arrival in Como and hotel check-in",
-                        "Walk along the lakeside promenade",
-                        "Visit to the historic center and cathedral",
-                        "Dinner at a traditional restaurant"
-                    ]
-                },
-                {
-                    day: 2,
-                    activities: [
-                        "Boat excursion on the lake",
-                        "Visit to Bellagio",
-                        "Lunch with lake view",
-                        "Relax and free time"
-                    ]
-                },
-                {
-                    day: 3,
-                    activities: [
-                        "Breakfast",
-                        "Visit to Villa Olmo",
-                        "Departure"
-                    ]
-                }
-            ],
-            transport: {
-                arrival: "Train to Como S. Giovanni",
-                local: "Boat and walking",
-                departure: "Afternoon train"
-            },
-            accommodation: {
-                name: "Hotel Como Lake View",
-                type: "3-star hotel",
-                nights: 2
-            },
-            placesToVisit: ["Como Cathedral", "Bellagio", "Villa Olmo", "Lakeside promenade"]
-        },
+        // details: {
+        //     description: "A relaxing trip to Lake Como featuring nature, historic villas, and scenic walks.",
+        //     meetingPoint: "Milan Central Station - main entrance",
+        //     itinerary: [
+        //         {
+        //             day: 1,
+        //             activities: [
+        //                 "Arrival in Como and hotel check-in",
+        //                 "Walk along the lakeside promenade",
+        //                 "Visit to the historic center and cathedral",
+        //                 "Dinner at a traditional restaurant"
+        //             ]
+        //         },
+        //         {
+        //             day: 2,
+        //             activities: [
+        //                 "Boat excursion on the lake",
+        //                 "Visit to Bellagio",
+        //                 "Lunch with lake view",
+        //                 "Relax and free time"
+        //             ]
+        //         },
+        //         {
+        //             day: 3,
+        //             activities: [
+        //                 "Breakfast",
+        //                 "Visit to Villa Olmo",
+        //                 "Departure"
+        //             ]
+        //         }
+        //     ],
+        //     transport: {
+        //         arrival: "Train to Como S. Giovanni",
+        //         local: "Boat and walking",
+        //         departure: "Afternoon train"
+        //     },
+        //     accommodation: {
+        //         name: "Hotel Como Lake View",
+        //         type: "3-star hotel",
+        //         nights: 2
+        //     },
+        //     placesToVisit: ["Como Cathedral", "Bellagio", "Villa Olmo", "Lakeside promenade"]
+        // },
         participants: [
             {
                 id: 1,
@@ -104,49 +104,49 @@ const trips = [
         city: "Trento",
         startDate: "2024-08-05",
         endDate: "2024-08-07",
-        details: {
-            description: "An adventurous trip in the Trentino mountains with trekking, nature, and breathtaking views.",
-            meetingPoint: "Verona Porta Nuova Station",
-            itinerary: [
-                {
-                    day: 1,
-                    activities: [
-                        "Arrival in Trento",
-                        "Check-in at mountain lodge",
-                        "Introductory walk",
-                        "Dinner at the lodge"
-                    ]
-                },
-                {
-                    day: 2,
-                    activities: [
-                        "Mountain trekking excursion",
-                        "Packed lunch",
-                        "Panoramic views of the Dolomites",
-                        "Return and relaxation"
-                    ]
-                },
-                {
-                    day: 3,
-                    activities: [
-                        "Breakfast",
-                        "Visit to Trento city center",
-                        "Departure"
-                    ]
-                }
-            ],
-            transport: {
-                arrival: "Train to Trento",
-                local: "Bus and hiking",
-                departure: "Evening train"
-            },
-            accommodation: {
-                name: "Dolomites Alpine Lodge",
-                type: "Mountain lodge",
-                nights: 2
-            },
-            placesToVisit: ["Dolomites", "Trento historic center", "Mountain trails"]
-        },
+        // details: {
+        //     description: "An adventurous trip in the Trentino mountains with trekking, nature, and breathtaking views.",
+        //     meetingPoint: "Verona Porta Nuova Station",
+        //     itinerary: [
+        //         {
+        //             day: 1,
+        //             activities: [
+        //                 "Arrival in Trento",
+        //                 "Check-in at mountain lodge",
+        //                 "Introductory walk",
+        //                 "Dinner at the lodge"
+        //             ]
+        //         },
+        //         {
+        //             day: 2,
+        //             activities: [
+        //                 "Mountain trekking excursion",
+        //                 "Packed lunch",
+        //                 "Panoramic views of the Dolomites",
+        //                 "Return and relaxation"
+        //             ]
+        //         },
+        //         {
+        //             day: 3,
+        //             activities: [
+        //                 "Breakfast",
+        //                 "Visit to Trento city center",
+        //                 "Departure"
+        //             ]
+        //         }
+        //     ],
+        //     transport: {
+        //         arrival: "Train to Trento",
+        //         local: "Bus and hiking",
+        //         departure: "Evening train"
+        //     },
+        //     accommodation: {
+        //         name: "Dolomites Alpine Lodge",
+        //         type: "Mountain lodge",
+        //         nights: 2
+        //     },
+        //     placesToVisit: ["Dolomites", "Trento historic center", "Mountain trails"]
+        // },
         participants: [
             {
                 id: 1,
@@ -196,49 +196,49 @@ const trips = [
         city: "Rimini",
         startDate: "2024-06-20",
         endDate: "2024-06-22",
-        details: {
-            description: "A relaxing seaside weekend with beach time, fun activities, and nightlife.",
-            meetingPoint: "Bologna Central Station",
-            itinerary: [
-                {
-                    day: 1,
-                    activities: [
-                        "Arrival and hotel check-in",
-                        "Beach and relaxation",
-                        "Seaside aperitif",
-                        "Night out"
-                    ]
-                },
-                {
-                    day: 2,
-                    activities: [
-                        "Full day at the beach",
-                        "Water sports",
-                        "Seafood dinner",
-                        "Nightlife"
-                    ]
-                },
-                {
-                    day: 3,
-                    activities: [
-                        "Breakfast",
-                        "Walk along the promenade",
-                        "Departure"
-                    ]
-                }
-            ],
-            transport: {
-                arrival: "Train to Rimini",
-                local: "Walking and bike",
-                departure: "Afternoon train"
-            },
-            accommodation: {
-                name: "Hotel Riviera Rimini",
-                type: "3-star hotel",
-                nights: 2
-            },
-            placesToVisit: ["Rimini Beach", "Promenade", "Historic center", "Nightlife venues"]
-        },
+        // details: {
+        //     description: "A relaxing seaside weekend with beach time, fun activities, and nightlife.",
+        //     meetingPoint: "Bologna Central Station",
+        //     itinerary: [
+        //         {
+        //             day: 1,
+        //             activities: [
+        //                 "Arrival and hotel check-in",
+        //                 "Beach and relaxation",
+        //                 "Seaside aperitif",
+        //                 "Night out"
+        //             ]
+        //         },
+        //         {
+        //             day: 2,
+        //             activities: [
+        //                 "Full day at the beach",
+        //                 "Water sports",
+        //                 "Seafood dinner",
+        //                 "Nightlife"
+        //             ]
+        //         },
+        //         {
+        //             day: 3,
+        //             activities: [
+        //                 "Breakfast",
+        //                 "Walk along the promenade",
+        //                 "Departure"
+        //             ]
+        //         }
+        //     ],
+        //     transport: {
+        //         arrival: "Train to Rimini",
+        //         local: "Walking and bike",
+        //         departure: "Afternoon train"
+        //     },
+        //     accommodation: {
+        //         name: "Hotel Riviera Rimini",
+        //         type: "3-star hotel",
+        //         nights: 2
+        //     },
+        //     placesToVisit: ["Rimini Beach", "Promenade", "Historic center", "Nightlife venues"]
+        // },
         participants: [
             {
                 id: 1,
@@ -288,49 +288,49 @@ const trips = [
         city: "Florence",
         startDate: "2024-09-15",
         endDate: "2024-09-17",
-        details: {
-            description: "A cultural trip to Florence exploring Renaissance art, museums, and historic architecture.",
-            meetingPoint: "Rome Termini Station",
-            itinerary: [
-                {
-                    day: 1,
-                    activities: [
-                        "Arrival in Florence",
-                        "Hotel check-in",
-                        "Visit to the Cathedral",
-                        "Evening walk"
-                    ]
-                },
-                {
-                    day: 2,
-                    activities: [
-                        "Visit to the Uffizi Gallery",
-                        "Ponte Vecchio",
-                        "Traditional lunch",
-                        "Visit to Palazzo Pitti"
-                    ]
-                },
-                {
-                    day: 3,
-                    activities: [
-                        "Breakfast",
-                        "Visit to Santa Croce",
-                        "Shopping and departure"
-                    ]
-                }
-            ],
-            transport: {
-                arrival: "High-speed train",
-                local: "Walking",
-                departure: "Afternoon train"
-            },
-            accommodation: {
-                name: "Hotel Florence Center",
-                type: "4-star hotel",
-                nights: 2
-            },
-            placesToVisit: ["Florence Cathedral", "Uffizi Gallery", "Ponte Vecchio", "Palazzo Pitti", "Santa Croce"]
-        },
+        // details: {
+        //     description: "A cultural trip to Florence exploring Renaissance art, museums, and historic architecture.",
+        //     meetingPoint: "Rome Termini Station",
+        //     itinerary: [
+        //         {
+        //             day: 1,
+        //             activities: [
+        //                 "Arrival in Florence",
+        //                 "Hotel check-in",
+        //                 "Visit to the Cathedral",
+        //                 "Evening walk"
+        //             ]
+        //         },
+        //         {
+        //             day: 2,
+        //             activities: [
+        //                 "Visit to the Uffizi Gallery",
+        //                 "Ponte Vecchio",
+        //                 "Traditional lunch",
+        //                 "Visit to Palazzo Pitti"
+        //             ]
+        //         },
+        //         {
+        //             day: 3,
+        //             activities: [
+        //                 "Breakfast",
+        //                 "Visit to Santa Croce",
+        //                 "Shopping and departure"
+        //             ]
+        //         }
+        //     ],
+        //     transport: {
+        //         arrival: "High-speed train",
+        //         local: "Walking",
+        //         departure: "Afternoon train"
+        //     },
+        //     accommodation: {
+        //         name: "Hotel Florence Center",
+        //         type: "4-star hotel",
+        //         nights: 2
+        //     },
+        //     placesToVisit: ["Florence Cathedral", "Uffizi Gallery", "Ponte Vecchio", "Palazzo Pitti", "Santa Croce"]
+        // },
         participants: [
             {
                 id: 1,

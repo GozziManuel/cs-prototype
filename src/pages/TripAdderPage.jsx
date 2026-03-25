@@ -7,24 +7,24 @@ const initialInput = {
   city: "",
   startDate: "",
   endDate: "",
-  details: {
-    description: "",
-    meetingPoint: "",
-    itinerary: [],
-    transport: {
-      arrival: "",
-      local: "",
-      departure: ""
-    },
-    accommodation: {
-      name: "",
-      type: "",
-      nights: null ,
-    },
-    placesToVisit: []
-  },
+  // details: {
+  //   description: "",
+  //   meetingPoint: "",
+  //   itinerary: [],
+  //   transport: {
+  //     arrival: "",
+  //     local: "",
+  //     departure: ""
+  //   },
+  //   accommodation: {
+  //     name: "",
+  //     type: "",
+  //     nights: null ,
+  //   },
+  //   placesToVisit: []
+  // },
   participants: [],
-  itinerary: [],
+  // itinerary: [],
 };
 // aggiungo addTrip come prop
 export default function TripAdder() {

@@ -5,7 +5,7 @@ import Triplist from "./pages/Triplist";
 import UserListPage from "./pages/UserListPage";
 import DetailedUserPage from "./pages/DetailedUserPage";
 import TripAdder from "./pages/TripAdderPage";
-import TripDetailsPage from "./pages/TripDetailsPage";
+// import TripDetailsPage from "./pages/TripDetailsPage";
 import AddParticipantPage from "./pages/AddParticipantsPage";
 import { TripsProvider } from "./contexts/TripsContext";
 
@@ -17,7 +17,7 @@ export default function App() {
           <Route element={<DefaultLayout />}>
             <Route index element={<Homepage />} />
             <Route path="/trips" element={<Triplist />} />
-            <Route path="/trips/:id" element={<TripDetailsPage />} />
+            {/* <Route path="/trips/:id" element={<TripDetailsPage />} /> */}
             <Route path="/trips/:id/participants" element={<UserListPage />} />
 
             <Route
