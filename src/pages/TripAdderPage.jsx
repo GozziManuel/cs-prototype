@@ -69,6 +69,7 @@ export default function TripAdder() {
               //
               type="text"
               className="form-control"
+              required
             />
           </div>
           <div className="mb-3">
@@ -80,6 +81,7 @@ export default function TripAdder() {
               //
               type="text"
               className="form-control"
+              required
             />
             <div className="form-text">Please insert valid City Name</div>
           </div>
@@ -92,6 +94,7 @@ export default function TripAdder() {
               //
               className="form-control"
               name="startDate"
+              required
             />
             <label className="form-label mx-3">
               <span className="fw-bold">To</span>
@@ -103,6 +106,7 @@ export default function TripAdder() {
               //
               className="form-control"
               name="endDate"
+              required
             />
           </div>
 
